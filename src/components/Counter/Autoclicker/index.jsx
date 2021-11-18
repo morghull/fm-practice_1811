@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 
-class StepTool extends Component {
+class Autoclicker extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      timerDelay: 1000,
+    };
+    this.intervalId = null;
   }
-  onStepChangeHandler = ({ target: { value } }) => {
-    if (value < 1 || value > 1000000) return;
-    const { setStep } = this.props;
-    setStep(value);
-  };
   render() {
-    const { step } = this.props;
+    const { timerDelay } = this.state;
     return (
       <div>
+        <button></button>
         <input
           type="number"
           value={step}
@@ -24,4 +24,4 @@ class StepTool extends Component {
   }
 }
 
-export default StepTool;
+export default Autoclicker;

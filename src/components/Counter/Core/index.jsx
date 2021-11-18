@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HeapTools from '../HeapTools';
+import HeapTools from './HeapTools';
 
 class Core extends Component {
   constructor(props) {
