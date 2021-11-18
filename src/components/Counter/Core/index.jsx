@@ -1,24 +1,39 @@
 import React, { Component } from 'react';
-import HeapTools from './HeapTools';
 
 class Core extends Component {
   constructor(props) {
     super(props);
-    this.state = { count: 0 };
+    this.state = { count: 0, isAdd: true };
   }
-  setCount = (delta) => {
-    this.setState((state, props) => ({ count: state.count + delta }));
+  changeDirection = () => {
+    this.setState((state, props) => ({
+      isAdd: !state.isAdd,
+    }));
+  };
+  makeStep = () => {
+    this.setState((state, props) => {
+      const { count, isAdd } = state;
+      const { step } = this.props;
+
+      const delta = (isAdd ? 1 : -1) * step;
+      return { count: count + delta };
+    });
   };
   render() {
     const { step } = this.props;
-    const { count } = this.state;
+    const { count, isAdd: isAdd } = this.state;
     return (
       <div>
         <h2>{count}</h2>
         <div>
           <span>{step}</span>
         </div>
-        <HeapTools step={step} setCount={this.setCount} />
+        <div>
+          <button onClick={this.makeStep}>
+            {isAdd ? 'Add' : 'Sub'}
+          </button>
+          <button onClick={this.changeDirection}>Change</button>
+        </div>
       </div>
     );
   }
