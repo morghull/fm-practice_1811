@@ -1,0 +1,32 @@
+.wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.counter {
+  align-self: flex-end;
+  font-size: 2rem;
+  margin-bottom: var(--space-between);
+  margin-right: 5rem;
+}
+.step {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  word-wrap: break-word;
+  line-height: 1.3rem;
+  font-size: 1.2rem;
+}
+.btn {
+  font-size: 1.2rem;
+  padding: 0.2em 0.5em;
+}
+.btn + .btn {
+  margin-left: var(--space-between);
+}

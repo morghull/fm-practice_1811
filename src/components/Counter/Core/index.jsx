@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './Core.module.css';
 
 class Core extends Component {
   constructor(props) {
@@ -23,16 +24,21 @@ class Core extends Component {
     const { step } = this.props;
     const { count, isAdd: isAdd } = this.state;
     return (
-      <div>
-        <h2>{count}</h2>
-        <div>
-          <span>{step}</span>
+      <div className={styles.wrapper}>
+        <span className={styles.counter}>{count}</span>
+        <div className={styles.step}>
+          Step size:<span>{step}</span>
         </div>
         <div>
-          <button onClick={this.makeStep}>
+          <button className={styles.btn} onClick={this.makeStep}>
             {isAdd ? 'Add' : 'Sub'}
           </button>
-          <button onClick={this.changeDirection}>Change</button>
+          <button
+            className={styles.btn}
+            onClick={this.changeDirection}
+          >
+            Change
+          </button>
         </div>
       </div>
     );

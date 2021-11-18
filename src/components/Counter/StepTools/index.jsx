@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './StepTool.module.css';
 
 class StepTool extends Component {
   constructor(props) {
@@ -12,11 +13,12 @@ class StepTool extends Component {
   render() {
     const { step } = this.props;
     return (
-      <div>
+      <div className={styles.wrapper}>
         <input
           type="number"
           value={step}
           name="step"
+          className={styles.input}
           onChange={this.onStepChangeHandler}
         />
       </div>
