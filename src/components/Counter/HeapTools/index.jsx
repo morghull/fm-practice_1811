@@ -6,7 +6,6 @@ class HeapTools extends Component {
     this.state = {
       isForward: true,
     };
-    this.buttonText = new Map().set(true, 'Add').set(false, 'Sub');
   }
   changeDirection = () => {
     const { isForward } = this.state;
@@ -16,17 +15,17 @@ class HeapTools extends Component {
   };
   makeHeap = () => {
     const { isForward } = this.state;
-    const { step, count, setCount } = this.props;
+    const { step, setCount } = this.props;
+
     const delta = (isForward ? 1 : -1) * step;
-    console.log(delta)
-    setCount(count + delta);
+    setCount(delta);
   };
   render() {
     const { isForward } = this.state;
     return (
       <div>
         <button onClick={this.makeHeap}>
-          {this.buttonText.get(isForward)}
+          {isForward ? 'Add' : 'Sub'}
         </button>
         <button onClick={this.changeDirection}>Change</button>
       </div>

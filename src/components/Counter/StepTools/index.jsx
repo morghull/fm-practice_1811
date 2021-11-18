@@ -22,9 +22,6 @@ class StepTool extends Component {
           name="step"
           onChange={this.onStepChangeHandler}
         />
-        <div>
-          <span>{step}</span>
-        </div>
       </div>
     );
   }
