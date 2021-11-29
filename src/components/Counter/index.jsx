@@ -20,7 +20,6 @@ class Counter extends Component {
       <section className={styles.section}>
         <Core step={step} />
         <StepTools step={step} setStep={this.setStep} />
-        <AutoclickTools />
       </section>
     );
   }

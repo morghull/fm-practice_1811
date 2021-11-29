@@ -7,6 +7,10 @@ const config = {
   buttonAddText: 'Add',
   buttonSubText: 'Sub',
   buttonChangeText: 'Change',
+  buttonStartText: 'Start',
+  buttonStopText: 'Stop',
+  labelStepText: 'Step:',
+  labelAutoclickerText: 'Autoclicker:',
 };
 
 export default config;

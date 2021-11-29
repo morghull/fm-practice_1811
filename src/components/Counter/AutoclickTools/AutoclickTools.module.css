@@ -1,14 +1,18 @@
 .wrapper {
-   width: 100%;
-   text-align: center;
-   margin-top: var(--space-between);
- }
- .input {
-   width: 50%;
-   outline: none;
-   font-size: 1.2rem;
- }
- .btn {
+  width: 100%;
+  text-align: center;
+  margin-top: var(--space-between);
+}
+.label {
+  margin-right: var(--space-between);
+  font-size: 1.2rem;
+}
+.btn {
+  outline: none;
+  font-size: 1.2rem;
+}
+.input {
+  width: 50%;
   outline: none;
   font-size: 1.2rem;
 }

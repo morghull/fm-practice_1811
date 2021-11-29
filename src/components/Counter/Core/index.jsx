@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './Core.module.css';
 import config from '../config';
+import AutoclickTools from '../AutoclickTools';
 const {
   defaultIsAdd,
   defaultStartValue,
@@ -48,6 +49,7 @@ class Core extends Component {
             {buttonChangeText}
           </button>
         </div>
+        <AutoclickTools makeStep={this.makeStep}/>
       </div>
     );
   }

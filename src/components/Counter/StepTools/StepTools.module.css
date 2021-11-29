@@ -3,6 +3,10 @@
   text-align: center;
   margin-top: var(--space-between);
 }
+.label {
+  margin-right: var(--space-between);
+  font-size: 1.2rem;
+}
 .input {
   width: 50%;
   outline: none;

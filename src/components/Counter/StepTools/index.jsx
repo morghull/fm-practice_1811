@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './StepTools.module.css';
 import config from '../config';
-const { minStepValue, maxStepValue } = config;
+const { minStepValue, maxStepValue, labelStepText } = config;
 
 class StepTools extends Component {
   constructor(props) {
@@ -16,6 +16,7 @@ class StepTools extends Component {
     const { step } = this.props;
     return (
       <div className={styles.wrapper}>
+        <span className={styles.label}>{labelStepText}</span>
         <input
           type="number"
           value={step}
