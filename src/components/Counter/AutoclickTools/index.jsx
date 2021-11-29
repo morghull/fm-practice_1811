@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Autoclicker extends Component {
+class AutoclickTools extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,4 +24,4 @@ class Autoclicker extends Component {
   }
 }
 
-export default Autoclicker;
+export default AutoclickTools;
