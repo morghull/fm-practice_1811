@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import styles from './StepTool.module.css';
+import config from '../config';
+const { minStepValue, maxStepValue } = config;
 
 class StepTool extends Component {
   constructor(props) {
     super(props);
   }
   onStepChangeHandler = ({ target: { value } }) => {
-    if (value < 1 || value > 1000000) return;
+    if (value < minStepValue || value > maxStepValue) return;
     const { setStep } = this.props;
     setStep(value);
   };

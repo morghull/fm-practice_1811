@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 import styles from './Core.module.css';
+import config from '../config';
+const {
+  defaultIsAdd,
+  defaultStartValue,
+  buttonAddText,
+  buttonSubText,
+  buttonChangeText,
+} = config;
 
 class Core extends Component {
   constructor(props) {
     super(props);
-    this.state = { count: 0, isAdd: true };
+    this.state = { count: defaultStartValue, isAdd: defaultIsAdd };
   }
   changeDirection = () => {
     this.setState((state, props) => ({
@@ -31,13 +39,13 @@ class Core extends Component {
         </div>
         <div>
           <button className={styles.btn} onClick={this.makeStep}>
-            {isAdd ? 'Add' : 'Sub'}
+            {isAdd ? buttonAddText : buttonSubText}
           </button>
           <button
             className={styles.btn}
             onClick={this.changeDirection}
           >
-            Change
+            {buttonChangeText}
           </button>
         </div>
       </div>
