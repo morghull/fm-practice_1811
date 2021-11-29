@@ -1,0 +1,17 @@
+.wrapper {
+   width: 100%;
+   text-align: center;
+   margin-top: var(--space-between);
+ }
+ .input {
+   width: 50%;
+   outline: none;
+   font-size: 1.2rem;
+ }
+ .btn {
+  outline: none;
+  font-size: 1.2rem;
+}
+.btn + .input {
+  margin-left: var(--space-between);
+}

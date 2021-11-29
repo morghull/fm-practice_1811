@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './AutoclickTools.module.css';
 
 class AutoclickTools extends Component {
   constructor(props) {
@@ -8,16 +9,22 @@ class AutoclickTools extends Component {
     };
     this.intervalId = null;
   }
+  onDelayChangeHandler = (event) => {
+    this.setState({
+      timerDelay: Number(event.target.value),
+    });
+  };
   render() {
     const { timerDelay } = this.state;
     return (
-      <div>
-        <button></button>
+      <div className={styles.wrapper}>
+        <button className={styles.btn}>Start</button>
         <input
+          className={styles.input}
           type="number"
-          value={step}
-          name="step"
-          onChange={this.onStepChangeHandler}
+          value={timerDelay}
+          name="delay"
+          onChange={this.onDelayChangeHandler}
         />
       </div>
     );

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import styles from './StepTool.module.css';
+import styles from './StepTools.module.css';
 import config from '../config';
 const { minStepValue, maxStepValue } = config;
 
-class StepTool extends Component {
+class StepTools extends Component {
   constructor(props) {
     super(props);
   }
@@ -28,4 +28,4 @@ class StepTool extends Component {
   }
 }
 
-export default StepTool;
+export default StepTools;
