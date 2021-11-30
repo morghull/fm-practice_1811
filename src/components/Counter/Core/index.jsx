@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styles from './Core.module.css';
 import config from '../config';
 import AutoclickTools from '../AutoclickTools';
 const {
+  defaultStepSize,
   defaultIsAdd,
   defaultStartValue,
   buttonAddText,
@@ -53,4 +55,13 @@ class Core extends Component {
     );
   }
 }
+
+Core.defaultProps = {
+  step: defaultStepSize,
+};
+
+Core.propTypes = {
+  step: PropTypes.number.isRequired,
+};
+
 export default Core;

@@ -1,7 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './StepTools.module.css';
 import config from '../config';
-const { minStepValue, maxStepValue, labelStepText } = config;
+const {
+  defaultStepSize,
+  minStepValue,
+  maxStepValue,
+  labelStepText,
+  labelCurrentStepSizeText,
+} = config;
 
 const StepTools = (props) => {
   const { step, setStep } = props;
@@ -22,10 +29,20 @@ const StepTools = (props) => {
         onChange={onStepChangeHandler}
       />
       <div className={styles.step}>
-        Step size:<span>{step}</span>
+        {labelCurrentStepSizeText}
+        <span>{step}</span>
       </div>
     </div>
   );
+};
+
+StepTools.defaultProps = {
+  step: defaultStepSize,
+};
+
+StepTools.propTypes = {
+  step: PropTypes.number.isRequired,
+  setStep: PropTypes.func.isRequired,
 };
 
 export default StepTools;
