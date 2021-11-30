@@ -29,9 +29,11 @@ class Core extends Component {
       return { count: count + delta };
     });
   };
+  shouldComponentUpdate(nextPtops, nextState) {
+    return nextPtops.step === this.props.step;
+  }
   render() {
-    console.log('sad');
-    const { count, isAdd: isAdd } = this.state;
+    const { count, isAdd } = this.state;
     return (
       <div className={styles.wrapper}>
         <span className={styles.counter}>{count}</span>
