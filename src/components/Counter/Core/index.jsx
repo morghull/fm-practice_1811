@@ -36,6 +36,7 @@ class Core extends Component {
   }
   render() {
     const { count, isAdd } = this.state;
+
     return (
       <div className={styles.wrapper}>
         <span className={styles.counter}>{count}</span>
