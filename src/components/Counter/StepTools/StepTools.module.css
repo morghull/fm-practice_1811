@@ -12,3 +12,10 @@
   outline: none;
   font-size: 1.2rem;
 }
+.step {
+  white-space: nowrap;
+  word-wrap: break-word;
+  margin-top: var(--space-between);
+  line-height: 1.3rem;
+  font-size: 1.2rem;
+}

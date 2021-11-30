@@ -30,14 +30,11 @@ class Core extends Component {
     });
   };
   render() {
-    const { step } = this.props;
+    console.log('sad');
     const { count, isAdd: isAdd } = this.state;
     return (
       <div className={styles.wrapper}>
         <span className={styles.counter}>{count}</span>
-        <div className={styles.step}>
-          Step size:<span>{step}</span>
-        </div>
         <div>
           <button className={styles.btn} onClick={this.makeStep}>
             {isAdd ? buttonAddText : buttonSubText}
@@ -49,7 +46,7 @@ class Core extends Component {
             {buttonChangeText}
           </button>
         </div>
-        <AutoclickTools makeStep={this.makeStep}/>
+        <AutoclickTools makeStep={this.makeStep} />
       </div>
     );
   }

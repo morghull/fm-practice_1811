@@ -3,7 +3,6 @@ import Core from './Core';
 import StepTools from './StepTools';
 import styles from './Counter.module.css';
 import config from './config';
-import AutoclickTools from './AutoclickTools';
 const { defaultStepSize } = config;
 
 class Counter extends Component {

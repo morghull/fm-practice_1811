@@ -18,12 +18,17 @@ class StepTools extends Component {
       <div className={styles.wrapper}>
         <span className={styles.label}>{labelStepText}</span>
         <input
-          type="number"
+          type="range"
           value={step}
           name="step"
+          min={minStepValue}
+          max={maxStepValue}
           className={styles.input}
           onChange={this.onStepChangeHandler}
         />
+        <div className={styles.step}>
+          Step size:<span>{step}</span>
+        </div>
       </div>
     );
   }

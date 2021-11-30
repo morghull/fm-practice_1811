@@ -13,16 +13,6 @@
   margin-bottom: var(--space-between);
   margin-right: 5rem;
 }
-.step {
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  white-space: nowrap;
-  word-wrap: break-word;
-  line-height: 1.3rem;
-  font-size: 1.2rem;
-}
 .btn {
   font-size: 1.2rem;
   padding: 0.2em 0.5em;
